@@ -1,0 +1,9 @@
+---
+- name : uninstall packege
+  hosts: all
+  become: true
+  tasks:
+  - name: uninstall packeges
+    yum:
+     name: ['git*', 'make*', 'wget*', 'telnet*', 'tree*', 'which*', 'docker*']
+     state: absent

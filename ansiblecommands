@@ -1,0 +1,558 @@
+    1  yum install tree -y
+    2  sudo yum install tree -y
+    3  visudo
+    4  sudo su -
+    5  exit
+    6  sudo yum install tree -y
+    7  visudo
+    8  sudo su -
+    9  exit
+   10  sudo yum install tree -y
+   11  sudo yum install httpd -y
+   12  sudo yum uninstall httpd -y
+   13  sudo yum remove httpd -y
+   14  sudo yum status httpd -y
+   15  sudo yum remove tree -y
+   16  ssh-keygen
+   17  clear
+   18  ls -a
+   19  cd .ssh/
+   20  ls -lrt
+   21  ls -a
+   22  cd 
+   23  exit
+   24  ansible --version
+   25  touch file1
+   26  ls -lrt
+   27  ls 
+   28  exit
+   29  ssh ansadmin@ip-172-31-24-213
+   30  ssh-keygen
+   31  ls -a
+   32  cd .ssh\ls -lrt
+   33  cd .ssh/
+   34  ls -lrt
+   35  cat id_rsa.pub
+   36  ssh-copy-id ansadmin@ip-172-31-24-213 
+   37  ssh-copy-id ansadmin@ip-172-31-31-26 
+   38  ssh ansadmin@ip-172-31-24-213 
+   39  ssh ansadmin@ip-172-31-24-213
+   40  ssh  ansadmin@ip-172-31-31-26 
+   41  cd /etc/ansible/
+   42  ls -lrt
+   43  ls -a
+   44  vi hosts
+   45  sudo vi hosts
+   46  cat /etc/ansible/hosts
+   47  ansible all -m ping
+   48  ansible webserver -m ping
+   49  ansible webserver[0] -m ping
+   50  ansible webserver[1] -m ping
+   51  ansible all -m ping
+   52  ansible webserver[1] -m ping
+   53  cd /etc/ansible/
+   54  sudo vi ansible.cfg
+   55  ansible all -m ping
+   56  cd /etc/
+   57  cd ansible/
+   58  ls -a
+   59  vi ansible.cfg
+   60  sudo vi ansible.cfg 
+   61  ansible all -m ping
+   62  sudo vi ansible.cfg 
+   63  anisible all -m command -a " touch file2"
+   64  ansible all -m command -a " touch file2"
+   65  ansible all -m command -a " ls -lrt"
+   66  ansible webserver -m command -a "touch vikky"
+   67  ansible webserver -m command -a "touch nivi"
+   68  ansible webserver -m command -a "ls -lrt"
+   69  ansible webserver -m command -a "rm -rf file*"
+   70  ansible webserver -m command -a "ls -lrt"
+   71  ansible webserver -m command -a "rm -rf file2"
+   72  ansible webserver -m command -a "ls -lrt"
+   73  ansible webserver -m command -a "rm -rf file1"
+   74  ansible webserver -m command -a "ls -lrt"
+   75  ansible all -m command -a "yum install tree"
+   76  ansible all -m command -a "sudo yum install tree"
+   77  ansible all -m command -a "yum remove tree -y" -b
+   78  ansible all -m command -a "yum install tree -y" -b
+   79  ansible -m command -a "which tree"
+   80  ansible all -b -m yum -a "name=httpd state=present"
+   81  ansible all -m command -a "ps -ef | grep httpd"
+   82  ansible all -m command -a "service httpd status"
+   83  ansible all -b -m service -a "name=httpd state=started"
+   84  ansible all -m command -a "service httpd status"
+   85  ansible all -b -m yum -a "name=git state=present"
+   86  ansible all -m command -a "which git"
+   87  ansible all -b -m user "name=was"
+   88  ansible -b -m user -a "name=was"
+   89  ansible all -m command -a "tail -1 /etc/passwd" -b
+   90  ansible all -b -m user -a "name=was"
+   91  ansible all -m command -a "tail -1 /etc/passwd" -b
+   92  ansible all -b -m setup
+   93  vi user-create.yml
+   94  ls -a
+   95  ansible-playbook user-create.yml 
+   96  clear
+   97  vi user-create.yml
+   98  ansible all -m command -a "tail -1 /etc/passwd" -b
+   99  exit
+  100  ls -lrt
+  101  vi 
+  102  vi user-create.yml
+  103  exit
+  104  ls -lrt
+  105  ansible all -m command -a "tail -1 /etc/passwd" -b
+  106  ansible all -m command "yum status httpd" -b
+  107  vi install_httpd.yml
+  108  ls -lrt
+  109  ansible-playbook install_httpd.yml
+  110  vi install_httpd.yml 
+  111  ansible-playbook install_httpd.yml
+  112  vi install_httpd.yml 
+  113  ansible-playbook install_httpd.yml
+  114  vi install_httpd.yml 
+  115  ansible-playbook install_httpd.yml
+  116  vi install_httpd.yml 
+  117  ansible-playbook install_httpd.yml
+  118  vi install_httpd.yml 
+  119  ansible all -m command -a " services httpd status"
+  120  ansible all -m command -a "service httpd status"
+  121  vi install_httpd.yml
+  122  history
+  123  history>>ansiblecommands
+    1  yum install tree -y
+    2  sudo yum install tree -y
+    3  visudo
+    4  sudo su -
+    5  exit
+    6  sudo yum install tree -y
+    7  visudo
+    8  sudo su -
+    9  exit
+   10  sudo yum install tree -y
+   11  sudo yum install httpd -y
+   12  sudo yum uninstall httpd -y
+   13  sudo yum remove httpd -y
+   14  sudo yum status httpd -y
+   15  sudo yum remove tree -y
+   16  ssh-keygen
+   17  clear
+   18  ls -a
+   19  cd .ssh/
+   20  ls -lrt
+   21  ls -a
+   22  cd 
+   23  exit
+   24  ansible --version
+   25  touch file1
+   26  ls -lrt
+   27  ls 
+   28  exit
+   29  ssh ansadmin@ip-172-31-24-213
+   30  ssh-keygen
+   31  ls -a
+   32  cd .ssh\ls -lrt
+   33  cd .ssh/
+   34  ls -lrt
+   35  cat id_rsa.pub
+   36  ssh-copy-id ansadmin@ip-172-31-24-213 
+   37  ssh-copy-id ansadmin@ip-172-31-31-26 
+   38  ssh ansadmin@ip-172-31-24-213 
+   39  ssh ansadmin@ip-172-31-24-213
+   40  ssh  ansadmin@ip-172-31-31-26 
+   41  cd /etc/ansible/
+   42  ls -lrt
+   43  ls -a
+   44  vi hosts
+   45  sudo vi hosts
+   46  cat /etc/ansible/hosts
+   47  ansible all -m ping
+   48  ansible webserver -m ping
+   49  ansible webserver[0] -m ping
+   50  ansible webserver[1] -m ping
+   51  ansible all -m ping
+   52  ansible webserver[1] -m ping
+   53  cd /etc/ansible/
+   54  sudo vi ansible.cfg
+   55  ansible all -m ping
+   56  cd /etc/
+   57  cd ansible/
+   58  ls -a
+   59  vi ansible.cfg
+   60  sudo vi ansible.cfg 
+   61  ansible all -m ping
+   62  sudo vi ansible.cfg 
+   63  anisible all -m command -a " touch file2"
+   64  ansible all -m command -a " touch file2"
+   65  ansible all -m command -a " ls -lrt"
+   66  ansible webserver -m command -a "touch vikky"
+   67  ansible webserver -m command -a "touch nivi"
+   68  ansible webserver -m command -a "ls -lrt"
+   69  ansible webserver -m command -a "rm -rf file*"
+   70  ansible webserver -m command -a "ls -lrt"
+   71  ansible webserver -m command -a "rm -rf file2"
+   72  ansible webserver -m command -a "ls -lrt"
+   73  ansible webserver -m command -a "rm -rf file1"
+   74  ansible webserver -m command -a "ls -lrt"
+   75  ansible all -m command -a "yum install tree"
+   76  ansible all -m command -a "sudo yum install tree"
+   77  ansible all -m command -a "yum remove tree -y" -b
+   78  ansible all -m command -a "yum install tree -y" -b
+   79  ansible -m command -a "which tree"
+   80  ansible all -b -m yum -a "name=httpd state=present"
+   81  ansible all -m command -a "ps -ef | grep httpd"
+   82  ansible all -m command -a "service httpd status"
+   83  ansible all -b -m service -a "name=httpd state=started"
+   84  ansible all -m command -a "service httpd status"
+   85  ansible all -b -m yum -a "name=git state=present"
+   86  ansible all -m command -a "which git"
+   87  ansible all -b -m user "name=was"
+   88  ansible -b -m user -a "name=was"
+   89  ansible all -m command -a "tail -1 /etc/passwd" -b
+   90  ansible all -b -m user -a "name=was"
+   91  ansible all -m command -a "tail -1 /etc/passwd" -b
+   92  ansible all -b -m setup
+   93  vi user-create.yml
+   94  ls -a
+   95  ansible-playbook user-create.yml 
+   96  clear
+   97  vi user-create.yml
+   98  ansible all -m command -a "tail -1 /etc/passwd" -b
+   99  exit
+  100  ls -lrt
+  101  vi 
+  102  vi user-create.yml
+  103  exit
+  104  ls -lrt
+  105  vi handdlers_install.yml
+  106  ansible-playbook handdlers_install.yml 
+  107  ansible-playbook -v handdlers_install.yml 
+  108  vi when_install_apache.yml
+  109  ls -lrt
+  110  ansible-playbook uninstall_httpd.yml
+  111  ansible all -m command -a "service httpd status"
+  112  ls -lrt
+  113  ansible-playbook when_install_apache.yml
+  114  vi when_install_apache.yml
+  115  ansible-playbook when_install_apache.yml
+  116  vi when_install_apache.yml
+  117  ansible-playbook when_install_apache.yml
+  118  vi when_install_apache.yml
+  119  vi when_install_apache2.yml
+  120  ansible-playbook when_install_apache2.yml
+  121  vi when_install_apache2.yml
+  122  ansible-playbook when_install_apache2.yml
+  123  vi when_install_apache2.yml
+  124  ansible-playbook when_install_apache2.yml
+  125  vi when_install_apache3.yml
+  126  ansible-playbook when_install_apache3.yml
+  127  vi when_install_apache3.yml
+  128  ansible-playbook when_install_apache3.yml
+  129  ls -lrt
+  130  rm -rf when_install_apache2.yml when_install_apache.yml
+  131  mv when_install_apache3.yml when_install_apache.yml
+  132  ls -lrt
+  133  vi when_install_apache.yml
+  134  ansible-playbook when_install_apache.yml
+  135  vi when_install_apache.yml
+  136  ls -lrt
+  137  vi install_complete_webserver.yml
+  138  ls -lrt
+  139  ansible-playbook install_complete_webserver.yml
+  140  vi install_complete_webserver.yml
+  141  ls -lrt
+  142  pwd
+  143  vi index.html
+  144  ls 0lrt
+  145  ls -lrt
+  146  ansible-playbook install_complete_webserver.yml
+  147  vi install_complete_webserver.yml
+  148  ansible-playbook install_complete_webserver.yml
+  149  vi install_multiple_package.yml
+  150  ls -lrt
+  151  vi install_complete_webserver.yml
+  152  cat install_multiple_package.yml
+  153  ansible-playbook install_multiple_package.yml 
+  154  ansible all -m command -a "which git"
+  155  docker --version
+  156  telnet 172.31.31.26 22
+  157  vi remove_packes.yml
+  158  ansible-playbook remove_packes.yml
+  159  vi remove_packes.yml
+  160  ansible-playbook remove_packes.yml
+  161  vi remove_packes.yml
+  162  ansible-playbook remove_packes.yml
+  163  vi remove_packes.yml
+  164  ansible-playbook remove_packes.yml
+  165  ansible all -m command -a "yum remove httpd* tree* git* docker* -y" -b
+  166  vi multiple_users.yml
+  167  ansible-playbook multiple_users.yml
+  168  vi multiple_users.yml
+  169  ansible-playbook multiple_users.yml
+  170  vi multiple_users.yml
+  171  ansible-playbook multiple_users.yml
+  172  vi multiple_users.yml
+  173  ls -lrt
+  174  vi var_user.yml
+  175  ls -lrt
+  176  ansible-playbook var_user.yml
+  177  vi var_user.yml 
+  178  cat var_user.yml 
+  179  ansible-playbook var_user.yml
+  180  ansible all -m command -a " tail -3 /etc/passwd"
+  181  vi user.yml
+  182  vi parent_var.yml
+  183  vi user.yml
+  184  ansible-playbook parent_var.yml
+  185  ansible-playbook parent_var.yml
+  186  cat parent_var.yml 
+  187  cat user.yml 
+  188  ansible all -m command -a " tail -5 /etc/passwd"
+  189  vi user.yml
+  190   parent_var.yml
+  191  ansible-playbook parent_var.yml
+  192  ansible all -m command -a " tail -5 /etc/passwd"
+  193  cat user.yml
+  194  cat parent_var.yml 
+  195  ansible all -m command -a " tail -5 /etc/passwd"
+  196  ansible-playbook --v  parent_var.yml
+  197  ansible-playbook -v  parent_var.yml
+  198  ansible setup
+  199  ansible --setup
+  200  ansible-playbook   parent_var.yml -e "user2=Vaidi"
+  201  ansible all -m command -a " tail -5 /etc/passwd"
+  202  cat user.yml
+  203  yum install java -y
+  204  sudo yum install java -y
+  205  java --version
+  206  df -h
+  207  vi install_tomcat.yml
+  208  cat install_tomcat.yml
+  209  ls -lrt
+  210  ansible-playbook install_tomcat.yml
+  211  vi install_tomcat.yml
+  212  ansible-playbook install_tomcat.yml
+  213  vi install_tomcat.yml
+  214  df -h
+  215  cd 
+  216  cd /
+  217  ls -lrt
+  218  cd 
+  219  ls -lrt
+  220  cd /opt/
+  221  ls -lrt
+  222  ansible-playbook install_tomcat.yml
+  223  cd 
+  224  ansible-playbook install_tomcat.yml
+  225  cd /opt/
+  226  ls -lrt
+  227  cd 
+  228  ls -lrt
+  229  cd /tmp/
+  230  ls -lrt
+  231  ansible-playbook install_tomcat.yml
+  232  cd 
+  233  ls -lrt
+  234  vi install_tomcat.yml
+  235  ansible-playbook install_tomcat.yml
+  236  vi install_tomcat.yml
+  237  ansible-playbook install_tomcat.yml
+  238  ansible-playbook -vvv install_tomcat.yml
+  239  vi install_tomcat.yml
+  240  ansible-playbook -vvv install_tomcat.yml
+  241  pwd
+  242  cd /opt/
+  243  cat install_tomcat.yml
+  244  cd 
+  245  cat install_tomcat.yml
+  246  vi install_tomcat.yml
+  247  ansible-playbook -vvv install_tomcat.yml
+  248  ansible-playbook  install_tomcat.yml
+  249  vi install_tomcat.yml
+  250  ansible-playbook  install_tomcat.yml
+  251  vi install_tomcat.yml
+  252  exit
+  253  ls -lrt
+  254  cd ansible_roles
+  255  ls -lrt
+  256  cd setup-apche-role
+  257  ls -lrt
+  258  vi tasks/main.yml 
+  259  cd ansible_roles/setup-apche-role/
+  260  vi tasks/main.yml 
+  261  cd ansible_roles/setup-apche-role/
+  262  ls -lrt
+  263  cd tasks/m
+  264  vi tasks/main.yml 
+  265  ls -lrt
+  266  ansible-vault create vault_install.yml
+  267  ansible-vault view  vault_install.yml
+  268  ls -lrt
+  269  ansible-vault edit vault_install.yml
+  270  ls -lrt
+  271  ansible-vault edit vault_install.yml
+  272  ls
+  273  ansible-vault encrypt remove_packes.yml
+  274  ansible-playbook remove_packes.yml
+  275  ansible-vault decrypt remove_packes.yml
+  276  mkdir ansible_roles
+  277  cd ansible_roles/
+  278  ansible-galaxy init setup-apche-role
+  279  ls -lrt
+  280  tree
+  281  yum install tree -y
+  282  sudo yum install tree -y
+  283  tree
+  284  rm -rf  README.md  defaults  meta
+  285  tree
+  286  rm -rf  README.md
+  287  rm -rf  defaults
+  288  rm -rf  templates
+  289  rm -rf  tests
+  290  ls -lrt
+  291  cd setup-apche-role
+  292  ls -lrt
+  293  rm -rf templates
+  294  rm -rf README.md
+  295  ls -la
+  296  rm -rf defaults
+  297  rm -rf meta
+  298  rm -rf tests
+  299  tree
+  300  ls -lrt
+  301  cd ansible_roles/
+  302  ls -lrt
+  303  cd setup-apche-role
+  304  vi install_tomcat.yml
+  305  ls -lrt
+  306  vi tasks/main.yml 
+  307  vi tasks/main.yml
+  308  cd ansible_roles/
+  309  cd setup-apche-role/
+  310  ls -lrt
+  311  vi tasks/main.yml
+  312  cd ansible_roles/setup-apche-role/
+  313  vi tasks/main.yml
+  314  ls -lrt
+  315  cp  install_httpd.yml install_httpd_error_handling.yml
+  316  vi install_httpd_error_handling.yml
+  317  cp when_install_apache.yml install_httpd_error_handling.yml
+  318  vi install_httpd_error_handling.yml
+  319  ansible-playbook install_httpd_error_handling.yml
+  320  cat install_httpd_error_handling.yml
+  321  vi install_httpd_error_handling.yml
+  322  ansible-playbook install_httpd_error_handling.yml
+  323  vi install_httpd_error_handling.yml
+  324  cd ansible_roles/setup-apche-role/
+  325  vi tasks/main.yml 
+  326  vi ../
+  327  vi vars/main.yml
+  328  cat tasks/main.yml
+  329  vi vars/main.yml
+  330  cat vars/main.yml 
+  331  vi vars/main.yml
+  332  vi handlers/main.yml 
+  333  cat handlers/main.yml
+  334  cd files/
+  335  ls -lrt
+  336  cd 
+  337  ls -lrt
+  338  pwd
+  339  cd -
+  340  cp /home/ansadmin/index.html .
+  341  ls -lrt
+  342  cd 
+  343  cd ansible_roles/
+  344  ls -lrt
+  345  setup_apache_role.yml
+  346  ls -lrt
+  347  ls -lrt
+  348  ansible-playbook uninstall_httpd.yml
+  349  vi  uninstall_httpd.yml
+  350  ansible all -m command -a " service httpd status"
+  351  ls -lrt
+  352  pwd
+  353  cp -p ansiblecommands /tmp
+  354  ls -lrt
+  355  ansible-vault create encrypt.yml
+  356  cd ansible_roles/setup-apche-role/
+  357  vi tasks/main.yml
+  358  cat tasks/main.yml
+  359  cat vars/main.yml 
+  360  vi handlers/main.yml 
+  361  ls -lrt
+  362  cd ansible_roles/setup-apche-role/
+  363  cd ..
+  364  ls -lrt
+  365  cd setup-apche-role/
+  366  ls -lrt
+  367  cd ..
+  368  ls -lrt
+  369  vi vi setup_apache_role.yml
+  370  ls -lrt
+  371  rm -rf vi 
+  372  vi setup_apache_role.yml
+  373  ls -lrt
+  374  ansible-playbook setup_apache_role.yml
+  375  cd ..
+  376  ls -lrt
+  377  ansible -m command -a "service httpd status"
+  378  ansible -m command -a "service httpd status" -b
+  379  ansible all -m command -a "service httpd status" -b
+  380  ansible-playbook uninstall_httpd.yml
+  381  ansible all -m command -a "service httpd status" -b
+  382  cd ansible_roles/
+  383  ls -lrt
+  384* 
+  385  ansible all -m command -a "service httpd status" -b
+  386  cd setup-apche-role/
+  387  ls -lrt
+  388  cd tasks
+  389  ls -lrt
+  390  cat main.yml
+  391  cd ../handlers/
+  392  ls -lrt
+  393  cat main.yml
+  394  vi  main.yml
+  395  cd ..
+  396  ansible all -m command -a "service httpd status" -b
+  397  cd ..
+  398  ls -lrt
+  399  ansible-playbook uninstall_httpd.yml
+  400  cd ansible_roles/
+  401  ansible-playbook setup_apache_role.yml
+  402  ls -lrt
+  403  cd setup-apche-role
+  404  ls -lrt
+  405  cat vars/main.yml
+  406  cat tasks/main.yml 
+  407  cat handlers/main.yml 
+  408  vi tasks/main.yml
+  409  cd ..
+  410  ls -lrt
+  411  ansible-playbook uninstall_httpd.yml
+  412  cd ansible_roles/
+  413  ls -lrt
+  414  ansible-playbook setup_apache_role.yml
+  415  ansible all -m command -a "service httpd status" -b
+  416  cd setup-apche-role/
+  417  ls -lrt
+  418* 
+  419  ls -lrt
+  420  cat vars/main.yml
+  421  cat files/index.html 
+  422  cat vars/main.yml
+  423  ls files/
+  424  ls -lrt
+  425  cat vars/main.yml
+  426  ls files/
+  427  cat handlers/main.yml 
+  428  cat tasks/main.yml 
+  429  cd 
+  430  ls -lrt
+  431  mkdir Ansible_Playbook
+  432  mv *.yml Ansible_Playbook/
+  433  ls -lrt
+  434  ls
+  435  history >>ansiblecommands

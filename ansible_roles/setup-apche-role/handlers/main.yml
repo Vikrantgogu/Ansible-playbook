@@ -1,0 +1,13 @@
+---
+# handlers file for setup-apche-role
+- name: start httpd servcie
+  service:
+      name: httpd
+      state: started
+
+
+- name: start apache service
+  service:
+      name: apache2
+      state: started
+ 

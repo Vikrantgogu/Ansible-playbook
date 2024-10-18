@@ -1,0 +1,6 @@
+---
+- name: install httpd packege
+  hosts: all
+  become: true
+  roles:
+   - setup-apche-role

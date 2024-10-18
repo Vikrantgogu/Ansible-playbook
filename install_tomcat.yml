@@ -1,0 +1,34 @@
+---
+- name: install Tomcat
+  hosts: all
+  become: true
+  tasks:
+    - name: install java on RedHat
+      yum:
+        name: java
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: download tomcat package
+      get_url: 
+        url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.31/bin/apache-tomcat-10.1.31.tar.gz
+        dest: /opt
+
+
+    - name: untar apache package
+      unarchive:
+         src: /opt/apache-tomcat-10.1.31.tar.gz
+         dest: /opt
+         remote_src: yes
+
+
+    - name: give permission to the directory
+      file:
+        path: /opt/apache-tomcat-10.1.31/bin
+        mode: 0777
+
+    - name: start tomcat services
+      shell: nohup ./startup.sh
+      args:
+        chdir: /opt/apache-tomcat-10.1.31/bin 
+

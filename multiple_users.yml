@@ -1,0 +1,13 @@
+---
+- name: multiple user creation
+  hosts: all
+  become: true
+  
+  tasks:
+    - name: add list of users
+      user: name='{{ item }}' state= present
+      with_items:
+        - nivi
+        - Raj
+        - Hari
+        - Trishul

@@ -1,0 +1,9 @@
+---
+- name : installe multiple packege
+  hosts: all
+  become: true
+  tasks:
+  - name: install packeges
+    yum:
+     name: ['git', 'make', 'wget', 'telnet', 'tree', 'which', 'docker']
+     state: installed
